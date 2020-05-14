@@ -1,0 +1,96 @@
+{
+  "name": "nativescript-sdk-examples-ng",
+  "description": "NativeScript & Angular SDK Examples",
+  "author": "Telerik <support@telerik.com>",
+  "version": "0.1.0",
+  "homepage": "https://github.com/NativeScript/nativescript-sdk-examples-ng",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NativeScript/nativescript-sdk-examples-ng"
+  },
+  "bugs": {
+    "url": "https://github.com/NativeScript/nativescript-sdk-examples-ng/issues"
+  },
+  "keywords": [
+    "NativeScript",
+    "Angular",
+    "SDK",
+    "example",
+    "documentation"
+  ],
+  "license": "Apache-2.0",
+  "nativescript": {
+    "id": "org.nativescript.nativescriptsdkexamplesng",
+    "tns-android": {
+      "version": "6.5.0"
+    },
+    "tns-ios": {
+      "version": "6.5.0"
+    }
+  },
+  "dependencies": {
+    "@angular/animations": "~8.2.0",
+    "@angular/common": "~8.2.0",
+    "@angular/compiler": "~8.2.0",
+    "@angular/core": "~8.2.0",
+    "@angular/forms": "~8.2.0",
+    "@angular/http": "~7.2.16",
+    "@angular/platform-browser": "~8.2.0",
+    "@angular/platform-browser-dynamic": "~8.2.0",
+    "@angular/router": "~8.2.0",
+    "@nativescript/theme": "~2.3.3",
+    "@ngx-translate/core": "^12.1.2",
+    "@ngx-translate/http-loader": "~4.0.0",
+    "lodash": "~4.17.15",
+    "nativescript-angular": "~8.21.0",
+    "nativescript-cardview": "^3.2.0",
+    "nativescript-material-cardview": "^2.5.4",
+    "nativescript-pro-ui": "~3.4.1",
+    "nativescript-theme-core": "~2.0.24",
+    "reflect-metadata": "~0.1.12",
+    "rxjs": "~6.5.5",
+    "tns-core-modules": "~6.5.1",
+    "zone.js": "~0.10.3",
+    "nativescript-camera": "^4.4.0",
+    "nativescript-geolocation": "^5.0.0",
+    "nativescript-intl": "~3.0.0"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "~8.2.0",
+    "@ngtools/webpack": "~8.2.0",
+    "@types/lodash": "^4.14.110",
+    "@types/node": "~6.0.60",
+    "babel-traverse": "6.26.0",
+    "babel-types": "6.26.0",
+    "babylon": "~6.18.0",
+    "codelyzer": "~5.2.2",
+    "fs-extra": "^0.30.0",
+    "glob": "^7.1.3",
+    "lazy": "~1.0.11",
+    "markdown-snippet-injector": "^0.2.2",
+    "nativescript-dev-webpack": "~1.5.1",
+    "node-sass": "~4.14.0",
+    "opener": "^1.4.1",
+    "rimraf": "^2.5.3",
+    "tar.gz": "^1.0.5",
+    "tns-platform-declarations": "~6.5.1",
+    "ts-node": "~8.9.1",
+    "tslint": "~6.1.2",
+    "typescript": "~3.4.5"
+  },
+  "scripts": {
+    "pretsc": "npm install",
+    "tsc": "tsc",
+    "pretslint": "npm run tsc",
+    "tslint": "tslint -p tsconfig.json",
+    "prebuild": "npm run tslint",
+    "build": "node scripts/build.js",
+    "postbuild": "npm run inject && npm run archive",
+    "inject": "mdinject --root=app --docsroot=dist/code-samples --sourceext=\".ts|.css|.html\" --snippettitles=\"TypeScript|CSS|HTML\"",
+    "archive": "node scripts/archive.js",
+    "update-webpack": "./node_modules/.bin/update-ns-webpack --deps --configs",
+    "update-angular": "./node_modules/.bin/update-app-ng-deps",
+    "update-app-ng-deps": "update-app-ng-deps",
+    "ns-verify-bundle": "ns-verify-bundle"
+  }
+}

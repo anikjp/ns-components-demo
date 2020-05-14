@@ -1,0 +1,12 @@
+<GridLayout class="p-15" rows="*" columns="*" sdkExampleTitle sdkToggleNavButton>
+    <!-- >> icon-font-code-behind-html -->
+    <ListView [items]="glyphs">
+        <ng-template let-item="item">
+            <StackLayout orientation="horizontal" horizontalAlignment="center">
+                <Label [text]="item.icon" class="ico"></Label>
+                <Label [text]="item.code"></Label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+    <!-- << icon-font-code-behind-html -->
+</GridLayout>

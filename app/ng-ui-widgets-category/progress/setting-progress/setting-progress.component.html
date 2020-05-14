@@ -1,0 +1,12 @@
+<GridLayout rows="*" sdkExampleTitle sdkToggleNavButton>
+    
+    <StackLayout verticalAlign="center" height="100">
+        <!-- >> progress-setting-html -->
+        <Progress (loaded)="onProgressBarLoaded($event)" 
+                  (valueChange)="onValueChanged($event)" 
+                  color="#8C489F" backgroundColor="#FFFF66" class="m-20">
+        </Progress>
+         <!-- << progress-setting-html -->
+    </StackLayout>
+   
+</GridLayout>

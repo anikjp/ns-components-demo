@@ -1,0 +1,10 @@
+{
+    "name": "nativescript-sdk-examples-ng",
+    "main": "main.js",
+    "version": "1.0.0",
+    "author": "Telerik <support@telerik.com>",
+    "description": "{N} SDK Sample App",
+    "android": {
+        "markingMode": "full"
+    }
+}
